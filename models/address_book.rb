@@ -8,6 +8,10 @@ class AddressBook
     @entries = []
   end
 
+  def delete_all_entries
+    @entries = []
+  end
+
 def add_entry(name, phone_number, email)
 
   index = 0
@@ -21,6 +25,7 @@ def add_entry(name, phone_number, email)
      # #11
      @entries.insert(index, Entry.new(name, phone_number, email))
    end
+
 
 def remove_entry(name, phone_number, email)
   delete_entry = nil
